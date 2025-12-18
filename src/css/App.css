@@ -1,0 +1,78 @@
+:root {
+  --gap-desktop-24: 1.5rem;
+  --gap-desktop-32: 2rem;
+  --gap-desktop-40: 2.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: var(--gap-desktop-24);
+}
+
+.logo-container {
+  height: 40px;
+  width: 40px;
+  background-image: url(../assets/01_logo.svg);
+  background-size: contain;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-desktop-32);
+}
+
+nav li {
+  list-style-type: none;
+}
+
+main {
+  min-height: 100vh;
+}
+
+section {
+  min-height: 100vh;
+}
+
+.hero-section {
+  display: flex;
+}
+
+.hero-left-side {
+  height: 100vh;
+  width: 50vw;
+}
+
+
+
+
+
+
+footer {
+  text-align: center;
+  padding-top: var(--gap-desktop-40);
+  padding-bottom: var(--gap-desktop-40);
+}

@@ -1,0 +1,79 @@
+.modes-wrapper {
+    z-index: 3;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0 0 3px 1px #000000 inset;
+    background-color: #444444DD;
+    outline: 2px solid #888888DD;
+    @media screen and (hover) {
+        /* right: unset;
+        left: 0; */
+    }
+}
+
+.mode-button {
+    height: 6vmin;
+    width: 6vmin;
+    border-radius: 50%;
+    outline: 1px solid #DDDDDD;
+    @media screen and (hover: none) and (min-width: 786px) {
+        height: 4vmin;
+        width: 4vmin;
+    }
+    @media screen and (hover) {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
+
+.mode-button.active {
+    outline: 6px solid #888888;
+    box-shadow: 0 0 3px 7px black;
+}
+   
+/* Buttons for each theme */
+
+.modes-wrapper #dark {
+    background-color: #000000;
+}
+
+.modes-wrapper #light {
+    background-color: #FFFFFF;
+}
+
+.modes-wrapper #nightsky {
+    background: linear-gradient(
+        70deg,
+        #0D1F2D 65%,
+        #D2973B 65%,
+        #D2973B 75%,
+        #0D1F2D 75%
+    );
+}
+
+.modes-wrapper #neon {
+    background: linear-gradient(
+        70deg,
+        #0d082a 60%,
+        #C450E0 60%,
+        #C450E0 70%,
+        #6DCBF9 70%
+    );
+}
+
+.modes-wrapper #earthy {
+    background: linear-gradient(
+        70deg,
+        #EBD292 50%,
+        #8C4D18,
+        #3F332B 85%
+    );
+}

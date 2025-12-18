@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
+import './css/App.css';
+import './css/theme-dark.css';
+import './css/theme-light.css';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
+import ModeButtons from './components/ModeButtons/ModeButtons';
+
 
 function App() {
+
+  const themeOptions = [
+    {themeName: "dark", key: 0},
+    {themeName: "light", key: 1},
+  ];
+
+  const [theme, setTheme] = useState("light");
+
+  function getTheme(newTheme) {
+    setTheme(newTheme);
+  };
+
+  const appClassName = "App " + theme;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={appClassName}>
+      <ModeButtons getTheme={getTheme} themeOptions={themeOptions} initialState={theme} />
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }
